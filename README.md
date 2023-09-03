@@ -1,5 +1,6 @@
 # YT NOTE
-#### Video Demo:  <URL https://www.youtube.com/watch?v=i0Sxj4pztXk>
+#### This is my final project for cs50x course
+#### Deploy: <URL http://lucastatsumi.pythonanywhere.com/>
 #### Description:
 This WebApplication can be use to create annotations about youtube videos.
 
