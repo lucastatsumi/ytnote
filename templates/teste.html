@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block head%}
+    
+{% endblock%}
+
+{% block body %}
+
+    <div class=" box-shadow"> 
+        <a href="index">LINK</a>
+
+    {% for row in teste %}
+        <div class="row" id="div{{ row[4] }}">
+            <div class="column1">
+                <h1 class="title-box">{{ row[0] }}</h1>
+                <img src="https://img.youtube.com/vi/{{row[2]}}/default.jpg" alt="" width="150px">
+            </div>
+            <div class="column2">
+                <p>{{ row[1     ] }}</p>
+                
+            </div>
+            <div class="column3">
+                <form action="function" method="post">
+                    <input name="id" value="{{row[3]}}" type="hidden">
+                    
+                    <div>
+                        <button name="botao" value="edit" class="btn btn-primary" style="float: left; ">edit</button>
+                    </div>
+                    <div style="margin-top: 35px;">
+                        <button name="botao" value="delete" class="btn btn-primary" style="float: left; margin-left: 20px;">delete</button>
+                    </div>
+                    <div>
+                        <button name="botao" value="mark" class="btn btn-danger" style="float: none; margin-left: 20px;" id="{{row[3]}}">mark</button>
+                        
+                    </div>
+                </form> 
+            </div>       
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

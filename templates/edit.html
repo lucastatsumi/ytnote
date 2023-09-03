@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+    <a href="teste">LINK</a>
+    <div class="containner box-shadow">
+        <div class="child">
+            <form action="edit" method="post"> 
+                <input type="hidden" value="{{ teste[3] }}" name="id">
+
+                <table>
+                    <tr>
+                        <th>
+                            <input type="text" value ="{{ teste[0] }}" name="name" id="name" placeholder="title">
+                            
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input type="text" name="url" value="https://www.youtube.com/watch?v={{ teste[2] }}" id="url" placeholder="url">
+                            
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <textarea name="text" id="description" value=""cols="30" rows="12" >{{ teste[1] }}</textarea>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input type="submit" value="submit" id="button">
+                        </th>
+                    </tr>
+                </table> 
+            </form>
+        </div>
+        
+    </div>
+   
+{% endblock %}
